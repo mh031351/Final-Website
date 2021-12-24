@@ -5,26 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
     <link rel="stylesheet" href="style.css">
 
     <title>Document</title>
 </head>
 <body>
 
+        <!-- header starts -->
 
     <header>
 
         <a href="#" class="logo"><i class="fas-fa-untensils">Al-Madina </i></a>
-
+        
         <nav class="navbar">
             <a class="active" href="#home">home</a>
-            <a href="#dishes">dishes</a>
-            <a href="#about">about</a>
-            <a href="#menu">menu</a>
-            <a href="#review">review</a>
-            <a href="#order">order</a>
+            <a href="#dishes">Dishes</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#review">Review</a>
+            <a href="#order">Order</a>
 
         </nav>
 
@@ -38,7 +42,7 @@
 
     </header>
     
-
+     <!-- search bar inter -->
 
     <form action="" id="search-form">
         <input type="search" placeholder="search Items..." name="" id="search-box">
@@ -51,27 +55,44 @@
     <!-- home/// -->
 
     <section class="home" id="home">
-        <div class=" home-slider">
+        <!-- <div class=" home-slider"> -->
 
-            <div class="wrapper">
-                <div class="slide">
-                <div class="content">
-                  <span> All Special Dish In our World </span>  
+            <!-- <div class="wrapper"> -->
+             <!-- <div class="slide"> -->
+             <div class="content">
+            <span> All Special Dish In our World </span>  
 
-                  <h3> Spicy Burger </h3>
-                <p>burger are all are most of people like. Berger all very dilicious and tasty dish Please order now (Al-Madina) </p>
-                  <a href="#" class="btn">order</a>
-                 </div>
-
-            <div class="image">
-                <img src="./images/home-img-3.png" alt="">
+             <h3 id="capital"> Mini Pizza  Offer </h3>
+             <p id="price">Rs:120.00</p>
+            <p id="bold">burger are all are most of people like. Berger all very dilicious and tasty dish Please order now (Al-Madina) </p>
+             <a href="#" class="btn">order</a>
             </div>
+
+            <div class="image" >
+                 <img  src="./images/home-img-3.png" alt=""> 
+             </div>
             </div>
-            
+           </div>
+
+    </section>
+
+    <!-- <section class="home " id="home">
+        <div class="content">
+            <h3> Mini Pizza  Offer </h3>
+            <p>burger are all are most of people like. Berger all very dilicious and tasty dish Please order now (Al-Madina) </p>
+            <a href="#" class="btn">order</a>
 
         </div>
 
+
+        <div class="image">
+            <img src="./images/dish-1.png" alt="">
+        </div>
+
     </section>
+     -->
+
+
 
     <!-- home section end -->
     
@@ -81,181 +102,301 @@
 
         <div class="box-container">
 
-            <div class="box">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <img src="./images/dish-1.png" alt="">
-                <h3>tasty food</h3>
-
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+        <!-- first card -->
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="./images/dish-1.png" width="200" alt="">
+            <h3>Zinger Burger</h3>
+            
+            <span>price: 180</span>
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#productModal" onclick="callModal('burger is th world of the spicy in people are rate the in hthe' , 550 , './images/dishes-2.png')">  <br><button class="btn"> Open now</button></a>
+    
+        <section class="modal fade" id="productModal">
+         <div class="modal-dialog">
+         <div class="modal-content">
+         <header class="modal-header">
+          <h6>PRODUCT</h6>
+                    </header>
+                    <section class="modal-body">
+                        <section class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <img id="prodImg" width="100%" src="./images/dish-1.png" alt="">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <p id="prodName"></p>
+                                <p id="prodPrice"></p>
+                            </div>
+                        </section>
+                    </section>
+                    <footer class="modal-footer">
+                        <button data-dismiss="modal" class="btn btn-danger">CLOSE</button>
+                    </footer>
                 </div>
-
-                <span>$12.33</span>
-                <a href="#" class="btn">add to cart</a>
             </div>
-
-
-            <div class="box">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <img src="./images/dish-2.png" alt="">
-                <h3>tasty food</h3>
-
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-
-                <span>$12.33</span>
-                <a href="#" class="btn">add to cart</a>
-            </div>
-
-
-            <div class="box">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <img src="./images/dish-3.png" alt="">
-                <h3>tasty food</h3>
-
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-
-                <span>$12.33</span>
-                <a href="#" class="btn">add to cart</a>
-            </div>
-
-
-            <div class="box">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <img src="./images/dish-4.png" alt="">
-                <h3>tasty food</h3>
-
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-
-                <span>$12.33</span>
-                <a href="#" class="btn">add to cart</a>
-            </div>
-
-
-            <div class="box">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <img src="./images/dish-6.png" alt="">
-                <h3>tasty food</h3>
-
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-
-                <span>$12.33</span>
-                <a href="#" class="btn">add to cart</a>
-            </div>
-
-
-            <div class="box">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <img src="./images/dish-5.png" alt="">
-                <h3>tasty food</h3>
-
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-
-                <span>$12.33</span>
-                <a href="#" class="btn">add to cart</a>
-            </div>
-
-
-            <div class="box">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <img src="./images/dish-6.png" alt="">
-                <h3>tasty food</h3>
-
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-
-                <span>$12.33</span>
-                <a href="#" class="btn">add to cart</a>
-            </div>
-
-            <div class="box">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <img src="./images/dish-3.png" alt="">
-                <h3>tasty food</h3>
-
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-
-                <span>$12.33</span>
-                <a href="#" class="btn">add to cart</a>
-            </div>
-
-            <div class="box">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <img src="./images/dish-5.png" alt="">
-                <h3>tasty food</h3>
-
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-
-                <span>$12.33</span>
-                <a href="#" class="btn">add to cart</a>
-            </div>
-
-
-
-
-
-
         </div>
-    </section>
+
+            <!-- second card -->
+
+         
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="./images/dish-2.png" width="200" alt="">
+                <h3>Naget</h3>
+                
+                <span>price: 599</span>
+                <a href="javascript:void(0)" data-toggle="modal" data-target="#productModal" onclick="callModal('burger is th world of the spicy in people are rate the in hthe' , 550 , './images/dishes-2.png')">  <br><button class="btn"> Open now</button></a>
+        
+            <section class="modal fade" id="productModal">
+             <div class="modal-dialog">
+             <div class="modal-content">
+             <header class="modal-header">
+              <h6>PRODUCT</h6>
+                        </header>
+                        <section class="modal-body">
+                            <section class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <img id="prodImg" width="100%" src="./images/dish-2.png" alt="">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <p id="prodName"></p>
+                                    <p id="prodPrice"></p>
+                                </div>
+                            </section>
+                        </section>
+                        <footer class="modal-footer">
+                            <button data-dismiss="modal" class="btn btn-danger">CLOSE</button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <!-- third card -->
+            
+           <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="./images/dish-3.png" width="200" alt="">
+            <h3>Full Chicken </h3>
+            
+            <span>price:1599</span>
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#productModal" onclick="callModal('burger is th world of the spicy in people are rate the in hthe' , 550 , './images/dishes-2.png')">  <br><button class="btn"> Open now</button></a>
+    
+        <section class="modal fade" id="productModal">
+         <div class="modal-dialog">
+         <div class="modal-content">
+         <header class="modal-header">
+          <h6>PRODUCT</h6>
+                    </header>
+                    <section class="modal-body">
+                        <section class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <img id="prodImg" width="100%" src="./images/dish-2.png" alt="">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <p id="prodName"></p>
+                                <p id="prodPrice"></p>
+                            </div>
+                        </section>
+                    </section>
+                    <footer class="modal-footer">
+                        <button data-dismiss="modal" class="btn btn-danger">CLOSE</button>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+            <!-- fourth card -->
+            
+           <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="./images/dish-4.png" width="200" alt="">
+            <h3>Mini pizza</h3>
+            
+            <span>price: 120</span>
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#productModal" onclick="callModal('burger is th world of the spicy in people are rate the in hthe' , 550 , './images/dishes-2.png')">  <br><button class="btn"> Open now</button></a>
+    
+        <section class="modal fade" id="productModal">
+         <div class="modal-dialog">
+         <div class="modal-content">
+         <header class="modal-header">
+          <h6>PRODUCT</h6>
+                    </header>
+                    <section class="modal-body">
+                        <section class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <img id="prodImg" width="100%" src="./images/dish-2.png" alt="">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <p id="prodName"></p>
+                                <p id="prodPrice"></p>
+                            </div>
+                        </section>
+                    </section>
+                    <footer class="modal-footer">
+                        <button data-dismiss="modal" class="btn btn-danger">CLOSE</button>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+            <!-- <!-- fivth card  -->
+
+            
+           <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="./images/dish-5.png" width="200" alt="">
+            <h3>Biscute IceCreame</h3>
+            
+            <span>price: 699</span>
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#productModal" onclick="callModal('burger is th world of the spicy in people are rate the in hthe' , 550 , './images/dishes-2.png')">  <br><button class="btn"> Open now</button></a>
+    
+        <section class="modal fade" id="productModal">
+         <div class="modal-dialog">
+         <div class="modal-content">
+         <header class="modal-header">
+          <h6>PRODUCT</h6>
+                    </header>
+                    <section class="modal-body">
+                        <section class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <img id="prodImg" width="100%" src="./images/dish-2.png" alt="">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <p id="prodName"></p>
+                                <p id="prodPrice"></p>
+                            </div>
+                        </section>
+                    </section>
+                    <footer class="modal-footer">
+                        <button data-dismiss="modal" class="btn btn-danger">CLOSE</button>
+                    </footer>
+                </div>
+            </div>
+        </div>
+            <!-- six card -->
+            
+           <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="./images/dish-6.png" width="200" alt="">
+            <h3>Crispy Fry</h3>
+            
+            <span>price: 150</span>
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#productModal" onclick="callModal('burger is th world of the spicy in people are rate the in hthe' , 550 , './images/dishes-2.png')">  <br><button class="btn"> Open now</button></a>
+    
+        <section class="modal fade" id="productModal">
+         <div class="modal-dialog">
+         <div class="modal-content">
+         <header class="modal-header">
+          <h6>PRODUCT</h6>
+                    </header>
+                    <section class="modal-body">
+                        <section class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <img id="prodImg" width="100%" src="./images/dish-2.png" alt="">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <p id="prodName"></p>
+                                <p id="prodPrice"></p>
+                            </div>
+                        </section>
+                    </section>
+                    <footer class="modal-footer">
+                        <button data-dismiss="modal" class="btn btn-danger">CLOSE</button>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- first modal  -->
+
+     <div class="box">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-eye"></a>
+        <img src="./images/dish-1.png" width="200" alt="">
+        <h3>Burger</h3>
+        
+        <span>price: 550</span>
+        <a href="javascript:void(0)" data-toggle="modal" data-target="#productModal" onclick="callModal('burger is th world of the spicy in people are rate the in hthe' , 550 , './images/dishes-2.PNG')">  <br><button class="btn"> Open now</button></a>
+
+    <section class="modal fade" id="productModal">
+     <div class="modal-dialog">
+     <div class="modal-content">
+     <header class="modal-header">
+      <h6>PRODUCT</h6>
+                </header>
+                <section class="modal-body">
+                    <section class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <img id="prodImg" width="100%" src="./images/dish-2.png" alt="">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <p id="prodName"></p>
+                            <p id="prodPrice"></p>
+                        </div>
+                    </section>
+                </section>
+                <footer class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-danger">CLOSE</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+        
+           <!-- seven card  -->
+
+           <div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="./images/istockphoto-938742222-170667a.jpg" width="200" alt="">
+            <h3>Chise Pizza</h3>
+            
+            <span>price: 549</span>
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#productModal" onclick="callModal('burger is th world of the spicy in people are rate the in hthe' , 550 , './images/dishes-2.png')">  <br><button class="btn"> Open now</button></a>
+    
+        <section class="modal fade" id="productModal">
+         <div class="modal-dialog">
+         <div class="modal-content">
+         <header class="modal-header">
+          <h6>PRODUCT</h6>
+                    </header>
+                    <section class="modal-body">
+                        <section class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <img id="prodImg" width="100%" src="./images/dish-2.png" alt="">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <p id="prodName"></p>
+                                <p id="prodPrice"></p>
+                            </div>
+                        </section>
+                    </section>
+                    <footer class="modal-footer">
+                        <button data-dismiss="modal" class="btn btn-danger">CLOSE</button>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        
+            <!-- eight card -->
+            <div class="box">
+              <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="./images/dish-5.png" alt="">
+            <h3>tasty food</h3>
+
+
+            <span>Rs:230</span>
+            <br>
+            <a href="#" class="btn">Order Now</a>
+            </div>
+            </div>
+          </section>
 
     <!-- home end -->
 
@@ -264,97 +405,114 @@
         <h1 class="heading">why choose us?</h1>
 
         <div class="row">
-
         <div class="image">
-            <img src="images/about-img.png">
-        </div>
+         <img src="images/about-img.png"> </div>
 
         <div class="content">
-            <h3>best food</h3>
-            <p>Lorem ipsum dolor sit amet 
-             consectetur adipisicing elit. Harum, cumque?</p>
-             <p>Lorem ipsum dolor sit amet.</p>
+         <h3>best food</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, cumque? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem doloribus, similique laboriosam nulla facere aut voluptatibus sed blanditiis! Consectetur voluptate cupiditate quae illo sed quidem nesciunt assumenda pariatur accusantium sapiente?</p>
+         <p>Lorem ipsum dolor sit amet.</p>
 
-             <div class="icons-container">
+         <div class="icons-container">
 
-                 <div class="icons">
-                <i class="fas fa-shipping-fast" ></i>
-                <span>free delivery</span>
-                 </div>
+         <div class="icons">
+         <i class="fas fa-shipping-fast" ></i>
+         <span>free delivery</span>
+          </div>
 
-                 <div class="icons">
-                    <i class="fas fa-dollar-sign" ></i>
-                    <span>free delivery</span>
-                 </div>
+        <div class="icons">
+         <i class="fas fa-dollar-sign" ></i>
+         <span>free delivery</span>
+         </div>
 
-                 <div class="icons">
-                    <i class="fas fa-headset" ></i>
-                    <span>free delivery</span>
-                </div>
-                </div>
+         <div class="icons">
+         <i class="fas fa-headset" ></i>
+         <span>free delivery</span>
+         </div>
+        </div>
 
-            <a href="#" class="btn">learn more</a>
+         <a href="#" class="btn">learn more</a>
         </div>
         </div>
 
         <!-- about section end -->
 
-        <!-- menu starts -->
+        <!-- menu starts now -->
 
         <section class="menu" id="menu">
 
-            <h3 class="sub-heading"> our menu </h3>
-            <h1 class="heading"> today's speciality </h1>
+        <h3 class="sub-heading"> our menu </h3>
+         <h1 class="heading"> today's speciality </h1>
         
-            <div class="box-container">
+         <div class="box-container">
         
-                <div class="box">
-                    <div class="image">
-                        <img src="images/menu-1.jpg" alt="">
-                        <a href="#" class="fas fa-heart"></a>
-                    </div>
-                    <div class="content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <h3>delicious food</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                        <a href="#" class="btn">add to cart</a>
-                        <span class="price">$12.99</span>
-                    </div>
-                </div>
+         <div class="box">
+         <div class="image">
+          <img src="images/menu-1.jpg" alt="">
+         <a href="#" class="fas fa-heart"></a>
+         </div>
+                 <div class="content">
+                  <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                 </div>
+         <h3>delicious food</h3>
+         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+         <a href="#" class="btn">add to cart</a>
+          <span class="price">Rs:550</span>
+         </div>
+        </div>
             
         
-                <div class="box">
-                    <div class="image">
-                        <img src="images/menu-2.jpg" alt="">
-                        <a href="#" class="fas fa-heart"></a>
+         <div class="box">
+        <div class="image">
+         <img src="images/menu-2.jpg" alt="">
+        <a href="#" class="fas fa-heart"></a>
+        </div>
+              <div class="content">
+              <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <div class="content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <h3>delicious food</h3>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <a href="#" class="btn">add to cart</a>
-                        <span class="price">$12.99</span>
-                    </div>
+             <h3>delicious food</h3>
+             <p>Lorem ipsum dolor sit amet.</p>
+             <a href="#" class="btn">Order Now</a>
+             <span class="price">Rs:220</span>
+             </div>
+             </div>
+        
+             <div class="box">
+             <div class="image">
+             <img src="images/menu-3.jpg" alt="">
+             <a href="#" class="fas fa-heart"></a>
+             </div>
+             <div class="content">
+                 <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star-half-alt"></i>
+                 </div>
+                  <h3>delicious food</h3>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+                  <a href="#" class="btn">Order Now</a>
+                  <span class="price">Rs:750</span>
+                </div>
                 </div>
         
                 <div class="box">
-                    <div class="image">
-                        <img src="images/menu-3.jpg" alt="">
-                        <a href="#" class="fas fa-heart"></a>
-                    </div>
-                    <div class="content">
+                  <div class="image">
+                  <img src="images/menu-4.jpg" alt="">
+                  <a href="#" class="fas fa-heart"></a>
+                  </div>
+                       <div class="content">
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -364,28 +522,8 @@
                         </div>
                         <h3>delicious food</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                        <a href="#" class="btn">add to cart</a>
-                        <span class="price">$12.99</span>
-                    </div>
-                </div>
-        
-                <div class="box">
-                    <div class="image">
-                        <img src="images/menu-4.jpg" alt="">
-                        <a href="#" class="fas fa-heart"></a>
-                    </div>
-                    <div class="content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <h3>delicious food</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                        <a href="#" class="btn">add to cart</a>
-                        <span class="price">$12.99</span>
+                        <a href="#" class="btn">Order Now</a>
+                        <span class="price">Rs:1650</span>
                     </div>
                 </div>
         
@@ -404,8 +542,8 @@
                         </div>
                         <h3>delicious food</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                        <a href="#" class="btn">add to cart</a>
-                        <span class="price">$12.99</span>
+                        <a href="#" class="btn">Order Now</a>
+                        <span class="price">Rs:499</span>
                     </div>
                 </div>
         
@@ -424,8 +562,8 @@
                         </div>
                         <h3>delicious food</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                        <a href="#" class="btn">add to cart</a>
-                        <span class="price">$12.99</span>
+                        <a href="#" class="btn">Order Now</a>
+                        <span class="price">Rs:1699</span>
                     </div>
                 </div>
         
@@ -444,8 +582,8 @@
                         </div>
                         <h3>delicious food</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                        <a href="#" class="btn">add to cart</a>
-                        <span class="price">$12.99</span>
+                        <a href="#" class="btn">Order Now</a>
+                        <span class="price">Rs:199</span>
                     </div>
                 </div>
         
@@ -464,8 +602,8 @@
                         </div>
                         <h3>delicious food</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                        <a href="#" class="btn">add to cart</a>
-                        <span class="price">$12.99</span>
+                        <a href="#" class="btn">order Now</a>
+                        <span class="price">Rs:5599</span>
                     </div>
                 </div>
         
@@ -484,8 +622,8 @@
                         </div>
                         <h3>delicious food</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                        <a href="#" class="btn">add to cart</a>
-                        <span class="price">$12.99</span>
+                        <a href="#" class="btn">Order Now</a>
+                        <span class="price">Rs:199</span>
                     </div>
                 </div>
         
@@ -504,8 +642,8 @@
                         </div>
                         <h3>delicious food</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                        <a href="#" class="btn">add to cart</a>
-                        <span class="price">180.00</span>
+                        <a href="#" class="btn">Order Now</a>
+                        <span class="price">Rs:1699</span>
                     </div>
                 </div> 
             </div>
@@ -524,21 +662,21 @@
                 <div class="swiper-wrapper">
         
                     <div class="swiper-slide slide">
-                        <div class="user">
-                            <img src="images/my img.jpg" alt="">
-                            <div class="user-info">
-                                <h3>Muhammad Hussain</h3>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <p> Muhammad Hussain This is my profile Please like it </p>
-                    </div>
+                     <div class="user">
+                     <img src="images/my img.jpg" alt="">
+                     <div class="user-info">
+                      <h3>Muhammad Hussain</h3>
+                             <div class="stars">
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star-half-alt"></i>
+                             </div>
+                </div>
+                </div>
+               <p> Muhammad Hussain This is my profile Please like it </p>
+                 </div>
         
                    
         
@@ -589,7 +727,7 @@
                     <label for="validationServer04">Select your Items</label>
                     <select class="custom-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
                       <option selected disabled value="">Selected your Items</option>
-                      <option>Spicy burger</option>
+                      <option>Mini Pizza</option>
                       <option>Zinger burger</option>
                       <option>mackroni</option>
                       <option>kulfa</option>
@@ -613,53 +751,121 @@
                     </div> -->
                   </div>
                 </div>
-                <button class="btn btn-primary" type="submit">Order Now</button>
+                <button class="btn btn-info" type="submit">Order Now</button>
               </form>
         
         </section>
 
                 <!-- order now -->
 
-                <section class="footer">
-
-                    <div class="box-container">
                 
-                        <div class="box">
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Things</h3>
+             <p>home</p>
+            <p>dishes</p>
+            <p>about</p>
+            <p>menu</p>
+            <p>reivew</p>
+            <p>order</p>
+        </div>
+
+        <div class="box">
+            <h3>Things</h3>
+            <p>home</p>
+            <p>dishes</p>
+            <p>about</p>
+            <p>menu</p>
+            <p>reivew</p>
+            <p>order</p>
+        </div>
+
+        <div class="box">
+            <img src="./images/dish-1.png" alt="">
+        </div>
+
+
+    </div>
+
+    <div class="credit"> copyright @ 2021 by <span>Muhammad Hussain</span> </div>
+
+</section>
+
+                <!-- <section class="footer"> -->
+
+                    <!-- <div class="box-container"> -->
+                
+                        <!-- <div class="box">
                             <h3>locations</h3>
                             
-                            <a href="#">Orangi Town Karachi Near Falcon Public School  </a>
-                    
-                        </div>
+                            <h3> Orangi Town Karachi Near Sindh Goverment Qater Hospital </h3>
+                            <img src="./images/map.PNG" width="90%" alt="">
+                        </div> -->
                 
+                        
+<!-- 
                         <div class="box">
-                            <h3>quick links</h3>
-                            <a href="#">home</a>
-                            <a href="#">dishes</a>
-                            <a href="#">about</a>
-                            <a href="#">menu</a>
-                            <a href="#">reivew</a>
-                            <a href="#">order</a>
+                        <p>Mini pizza</p>
+                        <p>Zinger burger</p>
+                        <p>special Burger </p>
+                        <p>pizza</p>
+                        <p>burger</p>
+                        <p>pasta</p>
+                        <p>kulfa</p>
+                        
                         </div>
-                
+
                         <div class="box">
-                            <h3>contact info</h3>
-                            <a href="https://web.whatsapp.com/">03151195083</a> 
-                            <i class="fas fa-what-up"><a href=""></a></i>
+                            <p>Mini pizza</p>
+                            <p>Zinger burger</p>
+                            <p>special Burger </p>
+                            <p>pizza</p>
+                            <p>burger</p>
+                            <p>pasta</p>
+                            <p>kulfa</p>
                             
                         </div>
-                
+
                         <div class="box">
+                            <p>Mini pizza</p>
+                            <p>Zinger burger</p>
+                            <p>special Burger </p>
+                            <p>pizza</p>
+                            <p>burger</p>
+                            <p>pasta</p>
+                            <p>kulfa</p>
+                            
+                        </div> -->
+                        
+                        <!-- <div class="box"> -->
+                            <!-- <img src="./images/dish-3.png" alt=""> -->
+                            <!-- <div class="credit"> copyright @ 2021 by <span>Muhammad Hussain</span> </div>
+                            </div> -->
+                        
+                
+                        <!-- <div class="box"> -->
+                            <!-- <h3>contact info</h3> -->
+                            <!-- <a href="https://web.whatsapp.com/">03151195083</a>  -->
+                            <!-- <a href="https://wa.me/+923151195083>" target="_blank">Link Text Here</a> -->
+                            <!-- http://wa.me/923151195083 -->
+                            <!-- <i class="fas fa-what-up"><a href=""></a></i> -->
+<!--                             
+                        </div> -->
+                
+                        <!-- <div class="box">
                             <h3>follow us</h3>
                             <a href="https://www.facebook.com">facebook</a>
                            <img src="images/githhub.PNG" alt=""> <a href="https://github.com/mh031351">Github</a>
                             
                         </div>
                 
-                    </div>
+                    </div> -->
                 
                     <!-- tag copy right -->
 
-            <div class="credit"> copyright @ 2021 by <span>Muhammad Husain</span> </div>
                 
                 </section>
                 

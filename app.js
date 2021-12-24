@@ -16,6 +16,8 @@ window.onscroll = () =>{
 }
 
 
+//  search bar 
+
 document.querySelector('#search-icon').onclick = () =>{
     document.querySelector('#search-form').classList.toggle('active');
   }
@@ -23,6 +25,17 @@ document.querySelector('#search-icon').onclick = () =>{
   document.querySelector('#close').onclick = () =>{
     document.querySelector('#search-form').classList.remove('active');
   }
+
+
+// callModal//
+
+ function callModal(name , price , img){
+    var prodName = document.getElementById("prodName")
+     var prodPrice = document.getElementById("prodPrice")
+    var prodImg = document.getElementById("prodImg")
+     prodName.innerHTML = name
+    prodPrice.innerHTML = price 
+        prodImg.src = i }
   
 
 
