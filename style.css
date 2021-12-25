@@ -63,11 +63,11 @@ section{
 
 @keyframes float {
     0%, 100%{
-        transform: translateY(0rem);
+        transform: translateY(6rem);
     }
 
     50%, 100%{
-        transform: translateY(5rem);
+        transform: translateY(3rem);
     }
 }
 
@@ -571,6 +571,8 @@ width: 100%;
     margin-left: 1rem;
     font-size: 2.5rem;
 }
+
+
  
 /* .review .slide{
 
@@ -773,7 +775,14 @@ width: 100%;
 }
 
 
+#whatup{
+    color: rgb(179, 16, 16);
+    font-size: large;
+}
 
+#facebook{
+    border-radius: 10px;
+}
 
 
 
